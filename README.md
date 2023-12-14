@@ -1,5 +1,5 @@
 # Introduction 
-TODO: Journal Life Project - Tulio Banegas 2023
+TODO: Journal Life Project - Tulio Banegas 2023 Diciembre
 
 # Getting Started
 TODO: Guide users through getting your code up and running on their own system. In this section you can talk about:

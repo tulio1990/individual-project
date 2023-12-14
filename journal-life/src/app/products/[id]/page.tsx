@@ -1,5 +1,5 @@
-import Details from "@/components/ui/products/ProductsReviews";
-import ProductDetail from "@/components/ui/profile/ProductDetail";
+
+
 
 export default function Detail({ params }: { params: { id: string } }) {
   return (
@@ -8,7 +8,7 @@ export default function Detail({ params }: { params: { id: string } }) {
         My Journal Detail
       </h2>
       <div>
-        <Details productId={params.id} />
+
       </div>
     </div>
   );

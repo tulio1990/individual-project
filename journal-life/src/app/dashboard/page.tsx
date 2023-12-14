@@ -1,7 +1,7 @@
 import { cards } from "@/lib/constants";
 import Card from "@/components/ui/dashboard/card/Card";
 import Transactions from "@/components/ui/dashboard/transactions/Transactions";
-import Chart from "@/components/ui/dashboard/chart/Chart";
+// import Chart from "@/components/ui/dashboard/chart/Chart";
 import Rightbar from "@/components/ui/dashboard/rightbar/RightBar";
 
 export default function Dashboard() {
@@ -14,7 +14,7 @@ export default function Dashboard() {
           ))}
         </div>
         <Transactions />
-        <Chart />
+        {/* <Chart /> */}
       </div>
       <div className="flex-1">
         <Rightbar />

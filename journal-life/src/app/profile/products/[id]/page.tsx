@@ -1,4 +1,4 @@
-import ProductDetail from "@/components/ui/profile/ProductDetail";
+
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
@@ -17,7 +17,6 @@ export default function Page({
         My Product Detail
       </h2>
       <div>
-        <ProductDetail productId={params.id} />
       </div>
     </div>
   );

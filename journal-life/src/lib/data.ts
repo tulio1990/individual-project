@@ -1,6 +1,5 @@
 "use server";
 
-import { RoleType } from "@prisma/client";
 import db from "./db";
 import { revalidatePath } from "next/cache";
 import { off } from "process";
@@ -103,7 +102,7 @@ export async function fetchUserById(id: string) {
 }
 
 /* Get Pages for users */
-export async function fetchUsersPages(query: string | RoleType) {
+export async function fetchUsersPages(query: string) {
   try {
     const count = await db.user.count({
       where: {

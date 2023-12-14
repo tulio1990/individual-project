@@ -2,11 +2,6 @@ import { authOptions } from "@/app/api/auth/[...nextauth]/route";
 import { fetchJournalsByUserId, fetchUserByEmail } from "@/lib/data";
 import { getServerSession } from "next-auth";
 import Image from "next/image";
-import {
-  DeleteProductButton,
-  DetailsProductsButton,
-  UpdateProductButton,
-} from "../dashboard/buttons/Buttons";
 import Pagination from "../dashboard/pagination/Pagination";
 import { formatCurrency } from "@/lib/utils";
 

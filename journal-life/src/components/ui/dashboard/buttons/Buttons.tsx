@@ -1,4 +1,4 @@
-import { deleteProduct, deleteUser } from "@/lib/data";
+import { deleteUser } from "@/lib/data";
 import { EyeIcon, PencilIcon, PlusIcon, TrashIcon } from "@heroicons/react/24/outline";
 import Link from "next/link";
 
@@ -52,18 +52,18 @@ export function DeleteUserButton({ id }: { id: string }) {
   );
 }
 
-/* Buttons for Products */
+// /* Buttons for Products */
 
-export function DetailsProductsButton({ id }: { id: string }) {
-  return (
-    <Link
-      href={`/profile/products/${id}`}
-      className="rounded-md border p-2 hover:bg-silverSand-300"
-    >
-      <EyeIcon className="w-5" />
-    </Link>
-  );
-}
+// export function DetailsProductsButton({ id }: { id: string }) {
+//   return (
+//     <Link
+//       href={`/profile/products/${id}`}
+//       className="rounded-md border p-2 hover:bg-silverSand-300"
+//     >
+//       <EyeIcon className="w-5" />
+//     </Link>
+//   );
+// }
 
 export function CreateProductButton() {
   return (
@@ -77,27 +77,27 @@ export function CreateProductButton() {
   );
 }
 
-export function UpdateProductButton({ id }: { id: string }) {
-  return (
-    <Link
-      href={`/profile/products/${id}/edit`}
-      className="rounded-md border p-2 hover:bg-silverSand-300"
-    >
-      <PencilIcon className="w-5" />
-    </Link>
-  );
-}
+// export function UpdateProductButton({ id }: { id: string }) {
+//   return (
+//     <Link
+//       href={`/profile/products/${id}/edit`}
+//       className="rounded-md border p-2 hover:bg-silverSand-300"
+//     >
+//       <PencilIcon className="w-5" />
+//     </Link>
+//   );
+// }
 
-export function DeleteProductButton({ id }: { id: string }) {
-  const deleteItem = deleteProduct.bind(null, id);
-  return (
-    <>
-      <form action={deleteItem}>
-        <button className="rounded-md border p-2 hover:bg-silverSand-300">
-          <span className="sr-only">Delete</span>
-          <TrashIcon className="w-5" />
-        </button>
-      </form>
-    </>
-  );
-}
+// export function DeleteProductButton({ id }: { id: string }) {
+//   const deleteItem = deleteProduct.bind(null, id);
+//   return (
+//     <>
+//       <form action={deleteItem}>
+//         <button className="rounded-md border p-2 hover:bg-silverSand-300">
+//           <span className="sr-only">Delete</span>
+//           <TrashIcon className="w-5" />
+//         </button>
+//       </form>
+//     </>
+//   );
+// }

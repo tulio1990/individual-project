@@ -1,0 +1,40 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider  = "postgresql"
+  url       = env("POSTGRES_PRISMA_URL")
+  directUrl = env("POSTGRES_URL_NON_POOLING") // For migrations & seeding
+}
+
+model User {
+  id           String    @id @default(cuid())
+  createdAt    DateTime  @default(now())
+  updatedAt    DateTime  @updatedAt
+  name         String
+  email        String    @unique
+  password     String
+  imageProfile String?
+  journals     Journal[]
+}
+
+model Journal {
+  id       Int       @id @default(autoincrement())
+  content  String
+  userId   String   
+  user     User     @relation(fields: [userId], references: [id])
+  images   Images[] 
+}
+
+model Images {
+  id        String  @id @default(cuid())
+  createdAt   DateTime   @default(now())
+  updatedAt   DateTime   @updatedAt
+  journalId Int      
+  journal   Journal  @relation(fields: [journalId], references: [id])
+}
+
